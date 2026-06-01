@@ -905,6 +905,10 @@ a.biz-tile:hover .biz-name::after { opacity: 1; }
   .passport-card { position: static !important; }
   .hero h1 { letter-spacing: 1px; }
   footer .foot-inner { gap: 24px; }
+  .corridor-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .corridor-grid > div:first-child { border-radius: 14px !important; padding: 24px !important; }
+  .corridor-grid > div:last-child  { border-radius: 14px !important; padding: 24px !important; }
+  #jeff-desc, #bishop-desc { font-size: 13px !important; line-height: 1.7 !important; }
 }
 
 /* ── Business guide category filter ── */
@@ -1075,7 +1079,7 @@ a.biz-tile:hover .biz-name::after { opacity: 1; }
     </div>
 
     <!-- TWO CORRIDOR CARDS -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:40px" class="reveal">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:40px" class="reveal corridor-grid">
 
       <!-- JEFFERSON BLVD -->
       <div style="background:#0D1A2E;border-radius:14px 0 0 14px;padding:36px;position:relative;overflow:hidden">
