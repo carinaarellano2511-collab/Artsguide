@@ -1324,25 +1324,25 @@ function toggleLearnMoreActivation(btn) {
       <!-- Category Tab Bar -->
       <div style="display:flex;flex-wrap:wrap;justify-content:center;border-bottom:2px solid rgba(0,200,224,0.2);margin-bottom:0;gap:0">
         <button type="button" class="filter-btn active" data-category="all" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:#00C8E0;border:none;border-bottom:3px solid #00C8E0;margin-bottom:-2px;cursor:pointer;transition:all 0.25s" onclick="filterBusinesses('all')">
-          All (49)
+          All (56)
         </button>
         <button type="button" class="filter-btn" data-category="food" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.5);border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.25s" onclick="filterBusinesses('food')">
-          🍽️ Food (21)
+          🍽️ Food (22)
         </button>
         <button type="button" class="filter-btn" data-category="bars" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.5);border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.25s" onclick="filterBusinesses('bars')">
           🍺 Bars (17)
         </button>
         <button type="button" class="filter-btn" data-category="retail" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.5);border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.25s" onclick="filterBusinesses('retail')">
-          🛍️ Retail (8)
+          🛍️ Retail (14)
         </button>
         <button type="button" class="filter-btn" data-category="arts" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.5);border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.25s" onclick="filterBusinesses('arts')">
           🎨 Arts (1)
         </button>
         <button type="button" class="filter-btn" data-category="services" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.5);border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.25s" onclick="filterBusinesses('services')">
-          ✂️ Services (2)
+          ✂️ Services (3)
         </button>
         <button type="button" class="filter-btn" data-category="dessert" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.5);border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.25s" onclick="filterBusinesses('dessert')">
-          🍰 Dessert (1)
+          🍰 Dessert (4)
         </button>
         <button type="button" class="filter-btn" data-category="historical" style="font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;padding:14px 22px;background:transparent;color:rgba(255,255,255,0.5);border:none;border-bottom:3px solid transparent;cursor:pointer;transition:all 0.3s;white-space:nowrap" onclick="filterBusinesses('historical')" onmouseover="this.style.color='#00C8E0'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">
           🏛️ Historical (4)
@@ -1362,7 +1362,7 @@ function toggleLearnMoreActivation(btn) {
 
       <!-- Active category heading -->
       <div id="category-header" style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:#FFFFFF;margin:28px 0 8px;text-align:left">
-        ALL BUSINESSES <span style="color:#00C8E0">— 49</span>
+        ALL BUSINESSES <span style="color:#00C8E0">— 56</span>
       </div>
     </div>
 
@@ -5084,13 +5084,13 @@ function filterBusinesses(category) {
   if (category !== 'food') filterCuisine('all-cuisine');
 
   var headings = {
-    all:        'ALL BUSINESSES <span style="color:#00C8E0">— 49</span>',
-    food:     '🍽️ FOOD <span style="color:#00C8E0">— 21</span>',
+    all:        'ALL BUSINESSES <span style="color:#00C8E0">— 56</span>',
+    food:     '🍽️ FOOD <span style="color:#00C8E0">— 22</span>',
     bars:     '🍺 BARS <span style="color:#00C8E0">— 17</span>',
-    retail:   '🛍️ RETAIL <span style="color:#00C8E0">— 8</span>',
+    retail:   '🛍️ RETAIL <span style="color:#00C8E0">— 14</span>',
     arts:     '🎨 ARTS <span style="color:#00C8E0">— 1</span>',
-    services: '✂️ SERVICES <span style="color:#00C8E0">— 2</span>',
-    dessert:    '🍰 DESSERT <span style="color:#00C8E0">— 1</span>',
+    services: '✂️ SERVICES <span style="color:#00C8E0">— 3</span>',
+    dessert:    '🍰 DESSERT <span style="color:#00C8E0">— 4</span>',
     historical: '🏛️ HISTORICAL <span style="color:#00C8E0">— 4</span>',
     free:       '🆓 FREE ARTS <span style="color:#00C8E0">— 1</span>'
   };
