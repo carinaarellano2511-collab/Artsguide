@@ -1092,6 +1092,12 @@ a.biz-tile:hover .biz-name::after { opacity: 1; }
   setInterval(update, 1000);
 })();
 
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    el.classList.add('visible');
+  });
+});
+
 function toggleLearnMore(btn) {
   var card = btn.closest('.guide-card');
   if (!card) return;
