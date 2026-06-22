@@ -5094,13 +5094,18 @@ function toggleLearnMore(btn) {
   if (!extendedDesc) return;
   
   const t = T[currentLang] || T['en'];
+  const isHidden = window.getComputedStyle(extendedDesc).display === 'none';
   
-  if (extendedDesc.style.display === 'none' || extendedDesc.style.display === '') {
-    extendedDesc.style.display = 'block';
-    btn.innerHTML = t['show-less'] || '− Show Less';
+  if (isHidden) {
+    extendedDesc.style.setProperty('display', 'block', 'important');
+    const lbl = btn.querySelector('.learn-more-text');
+    if (lbl) lbl.textContent = t['show-less'] || '− Show Less';
+    else btn.innerHTML = t['show-less'] || '− Show Less';
   } else {
-    extendedDesc.style.display = 'none';
-    btn.innerHTML = t['learn-more'] || '+ Learn More';
+    extendedDesc.style.setProperty('display', 'none', 'important');
+    const lbl = btn.querySelector('.learn-more-text');
+    if (lbl) lbl.textContent = t['learn-more'] || '+ Learn More';
+    else btn.innerHTML = t['learn-more'] || '+ Learn More';
   }
 }
 
