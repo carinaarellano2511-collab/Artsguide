@@ -1091,6 +1091,30 @@ a.biz-tile:hover .biz-name::after { opacity: 1; }
   update();
   setInterval(update, 1000);
 })();
+
+function toggleLearnMore(btn) {
+  var card = btn.closest('.guide-card');
+  if (!card) return;
+  var d = card.querySelector('.extended-desc');
+  if (!d) return;
+  var show = d.style.display === 'none' || d.style.display === '';
+  d.style.display = show ? 'block' : 'none';
+  var lbl = btn.querySelector('.learn-more-text');
+  if (lbl) lbl.textContent = show ? '− Show Less' : '+ Learn More';
+  else btn.innerHTML = show ? '− Show Less' : '+ Learn More';
+}
+
+function toggleLearnMoreActivation(btn) {
+  var card = btn.closest('.activation-card');
+  if (!card) return;
+  var d = card.querySelector('.extended-desc-activation');
+  if (!d) return;
+  var show = d.style.display === 'none' || d.style.display === '';
+  d.style.display = show ? 'block' : 'none';
+  var lbl = btn.querySelector('.learn-more-text');
+  if (lbl) lbl.textContent = show ? '− Show Less' : '+ Learn More';
+  else btn.innerHTML = show ? '− Show Less' : '+ Learn More';
+}
 </script>
 
 <!-- ═══════ THE STORY ═══════ -->
