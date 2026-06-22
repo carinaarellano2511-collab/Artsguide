@@ -5090,20 +5090,19 @@ function filterCuisine(cuisine) {
 function toggleLearnMore(btn) {
   const card = btn.closest('.guide-card');
   if (!card) return;
-  
+
   const extendedDesc = card.querySelector('.extended-desc');
   if (!extendedDesc) return;
-  
+
   const t = T[currentLang] || T['en'];
-  const isHidden = window.getComputedStyle(extendedDesc).display === 'none';
-  
-  if (isHidden) {
-    extendedDesc.style.setProperty('display', 'block', 'important');
+
+  if (extendedDesc.style.display === 'none' || extendedDesc.style.display === '') {
+    extendedDesc.style.display = 'block';
     const lbl = btn.querySelector('.learn-more-text');
     if (lbl) lbl.textContent = t['show-less'] || '− Show Less';
     else btn.innerHTML = t['show-less'] || '− Show Less';
   } else {
-    extendedDesc.style.setProperty('display', 'none', 'important');
+    extendedDesc.style.display = 'none';
     const lbl = btn.querySelector('.learn-more-text');
     if (lbl) lbl.textContent = t['learn-more'] || '+ Learn More';
     else btn.innerHTML = t['learn-more'] || '+ Learn More';
